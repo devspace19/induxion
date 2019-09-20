@@ -1,0 +1,27 @@
+{
+  "name": "induxion",
+  "version": "0.0.0",
+  "description": "A Redux State Management for Central Distributed System",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/devspace19/induxion.git"
+  },
+  "keywords": [
+    "redux",
+    "reactjs",
+    "redux-thunk",
+    "state-management",
+    "distributed",
+    "cli"
+  ],
+  "author": "Devspace <devspace19@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/devspace19/induxion/issues"
+  },
+  "homepage": "https://github.com/devspace19/induxion#readme"
+}
