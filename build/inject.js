@@ -30,14 +30,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var HOCComponent = function HOCComponent(Component) {
-  var Action = {};
-
-  if (window !== undefined) {
-    Action = window._actions;
-  } else {
-    Action = global._actions;
-  } // Map state to props
-
+  var Action = {}; // Map state to props
 
   var mapStateToProps = function mapStateToProps(state) {
     return state;
@@ -63,6 +56,13 @@ var HOCComponent = function HOCComponent(Component) {
 
     mapDispatchToProps = function mapDispatchToProps(dispatch) {
       var props = {};
+
+      if (window !== undefined) {
+        Action = window._actions;
+      } else {
+        Action = global._actions;
+      }
+
       actions.forEach(function (action) {
         return props[action] = function () {
           var _Action;
