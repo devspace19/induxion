@@ -3,9 +3,8 @@ import thunk from 'redux-thunk';
 
 import reduxMiddleware from './reduxMiddleware';
 
-export default function configureStore({ preloadedState = {}, actions = {}, reducers = {} }) {
+export default function configureStore({ preloadedState = {}, actions = {}, reducers = {}, middlewares = [ reduxMiddleware(), thunk ] }) {
   const reducerCreators = combineReducers(reducers);
-  const middleware = [reduxMiddleware(), thunk];
   const DEV = process.env.NODE_ENV !== 'production';
   let composeEnhancers = compose;
 
@@ -25,7 +24,7 @@ export default function configureStore({ preloadedState = {}, actions = {}, redu
   const store = createStore(
     reducerCreators,
     preloadedState,
-    composeEnhancers(applyMiddleware(...middleware))
+    composeEnhancers(applyMiddleware(...middlewares))
   );
 
   return store;
