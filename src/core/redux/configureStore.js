@@ -6,9 +6,11 @@ import reduxMiddleware from './reduxMiddleware';
 export default function configureStore({ preloadedState = {}, actions = {}, reducers = {} }) {
   const reducerCreators = combineReducers(reducers);
   const middleware = [reduxMiddleware(), thunk];
+  const DEV = process.env.NODE_ENV !== 'production';
   let composeEnhancers = compose;
 
-  if (window !== undefined && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
+
+  if (window !== undefined && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ && DEV) {
     composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
       actions
     });
