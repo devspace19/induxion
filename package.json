@@ -28,12 +28,21 @@
   },
   "homepage": "https://github.com/devspace19/induxion#readme",
   "dependencies": {
+    "chalk": "^2.4.2",
+    "cli-progress": "^3.1.0",
+    "commander": "^3.0.2",
+    "nodegit": "^0.26.1",
+    "rimraf": "^3.0.0",
+    "url": "^0.11.0",
     "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0"
+  },
+  "bin": {
+    "create-induxion-app": "./src/cli/index.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
