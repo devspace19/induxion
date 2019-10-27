@@ -1,0 +1,5 @@
+{
+    "hooks": {
+        "post-commit": "npm run build"
+    }
+}
