@@ -1,5 +1,5 @@
 {
     "hooks": {
-        "post-commit": "npm run build"
+        "pre-commit": "npm run build && git add -A && git commit --amend -C HEAD --no-verify"
     }
 }
