@@ -8,10 +8,16 @@ export default function configureStore({ preloadedState = {}, actions = {}, redu
   const middleware = [reduxMiddleware(), thunk];
   let composeEnhancers = compose;
 
-  if (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
+  if (window !== undefined && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
     composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
       actions
     });
+  }
+
+  if (window !== undefined) {
+    window._actions = actions;
+  } else {
+    global._actions = actions;
   }
 
   const store = createStore(

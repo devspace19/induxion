@@ -2,9 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import get from 'lodash';
 
-import * as Action from './redux/actions';
-
 const HOCComponent = Component => {
+  let Action = {};
+
+  if (window !== undefined) {
+    Action = window._actions;
+  } else {
+    Action = global._actions;
+  }
+
   // map state to props 
   let mapStateToProps = state => state;
   
