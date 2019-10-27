@@ -23,5 +23,16 @@
   "bugs": {
     "url": "https://github.com/devspace19/induxion/issues"
   },
-  "homepage": "https://github.com/devspace19/induxion#readme"
+  "homepage": "https://github.com/devspace19/induxion#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "cli-progress": "^3.1.0",
+    "commander": "^3.0.2",
+    "nodegit": "^0.26.1",
+    "rimraf": "^3.0.0",
+    "url": "^0.11.0"
+  },
+  "bin": {
+    "create-induxion-app": "./src/cli/index.js"
+  }
 }
