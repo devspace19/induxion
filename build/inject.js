@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRedux = require("react-redux");
 
-var _lodash = _interopRequireDefault(require("lodash"));
+var _get = _interopRequireDefault(require("lodash/get"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -36,7 +36,7 @@ var HOCComponent = function HOCComponent(Component) {
     Action = window._actions;
   } else {
     Action = global._actions;
-  } // map state to props 
+  } // Map state to props
 
 
   var mapStateToProps = function mapStateToProps(state) {
@@ -49,31 +49,35 @@ var HOCComponent = function HOCComponent(Component) {
     mapStateToProps = function mapStateToProps(mapState) {
       var props = {};
       Object.keys(states).map(function (state) {
-        props[state] = (0, _lodash["default"])(mapState, "".concat(states[state]));
+        props[state] = (0, _get["default"])(mapState, "".concat(states[state]));
       });
       return props;
     };
-  } // map dispatch to props 
+  } // Map dispatch to props
 
 
   var mapDispatchToProps = undefined;
 
   if (Component.getActions) {
     var actions = Component.getActions;
-    actions.map(function (action) {
-      props[action] = function () {
-        var _Action;
 
-        return dispatch((_Action = Action)[action].apply(_Action, arguments));
-      };
-    });
-    return props;
+    mapDispatchToProps = function mapDispatchToProps(dispatch) {
+      var props = {};
+      actions.forEach(function (action) {
+        return props[action] = function () {
+          var _Action;
+
+          return dispatch((_Action = Action)[action].apply(_Action, arguments));
+        };
+      });
+      return props;
+    };
   }
 
   var MainComponent =
   /*#__PURE__*/
-  function (_Component) {
-    _inherits(MainComponent, _Component);
+  function (_React$Component) {
+    _inherits(MainComponent, _React$Component);
 
     function MainComponent() {
       var _getPrototypeOf2;
@@ -96,7 +100,7 @@ var HOCComponent = function HOCComponent(Component) {
     }
 
     return MainComponent;
-  }(Component);
+  }(_react["default"].Component);
 
   return (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(MainComponent);
 };
