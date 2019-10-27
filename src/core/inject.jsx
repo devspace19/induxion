@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import get from 'lodash';
+import get from 'lodash/get';
 
 const HOCComponent = Component => {
   let Action = {};
@@ -11,9 +11,10 @@ const HOCComponent = Component => {
     Action = global._actions;
   }
 
-  // map state to props 
+
+  // Map state to props
   let mapStateToProps = state => state;
-  
+
   if (Component.getStates) {
     const states = Component.getStates;
 
@@ -25,23 +26,27 @@ const HOCComponent = Component => {
       });
 
       return props;
-    }
+    };
   }
 
-  // map dispatch to props 
+  // Map dispatch to props
   let mapDispatchToProps = undefined;
 
   if (Component.getActions) {
     const actions = Component.getActions;
 
-    actions.map(action => {
-      props[action] = (...args) => dispatch(Action[action](...args));
-    });
+    mapDispatchToProps = dispatch => {
+      const props = {};
 
-    return props;
+      actions.forEach(
+        action =>
+          (props[action] = (...args) => dispatch(Action[action](...args)))
+      );
+      return props;
+    };
   }
 
-  class MainComponent extends Component {
+  class MainComponent extends React.Component {
     render = () => <Component {...this.props} />;
   }
 
