@@ -21,3 +21,5 @@ var _inject = _interopRequireDefault(require("./inject"));
 var _provider = _interopRequireDefault(require("./provider"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+console.log('test');
