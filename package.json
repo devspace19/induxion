@@ -5,8 +5,8 @@
   "main": "build/index.js",
   "scripts": {
     "links": "npm link && npm link induxion",
-    "watch": "babel src -d build --copy-files --watch",
-    "transpile": "babel src -d build --copy-files",
+    "watch": "babel src/core -d build --copy-files --watch",
+    "transpile": "babel src/core -d build --copy-files",
     "test": "npm test"
   },
   "repository": {

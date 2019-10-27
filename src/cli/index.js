@@ -2,7 +2,7 @@
 
 // Load modules
 const app = require('commander');
-const package = require('../../package.json');
+const packageJSON = require('../../package.json');
 const signature = require('./helpers/signature');
 const text = require('./helpers/text');
 const line = require('./helpers/line');
@@ -36,7 +36,7 @@ const action = async (target) => {
 
 // Set options
 app
-    .version(package.version)
+    .version(packageJSON.version)
     .arguments(arguments)
     .action(action);
 
