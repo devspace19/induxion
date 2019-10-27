@@ -16,10 +16,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var InduxionProvider = function InduxionProvider(_ref) {
   var children = _ref.children,
       actions = _ref.actions,
-      reducers = _ref.reducers;
+      reducers = _ref.reducers,
+      middlewares = _ref.middlewares;
   var store = (0, _configureStore["default"])({
     actions: actions,
-    reducers: reducers
+    reducers: reducers,
+    middlewares: middlewares
   });
   return _react["default"].createElement(_reactRedux.Provider, {
     store: store
