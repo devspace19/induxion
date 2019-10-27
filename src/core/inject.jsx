@@ -5,13 +5,6 @@ import get from 'lodash/get';
 const HOCComponent = Component => {
   let Action = {};
 
-  if (window !== undefined) {
-    Action = window._actions;
-  } else {
-    Action = global._actions;
-  }
-
-
   // Map state to props
   let mapStateToProps = state => state;
 
@@ -37,6 +30,12 @@ const HOCComponent = Component => {
 
     mapDispatchToProps = dispatch => {
       const props = {};
+
+      if (window !== undefined) {
+        Action = window._actions;
+      } else {
+        Action = global._actions;
+      }
 
       actions.forEach(
         action =>
