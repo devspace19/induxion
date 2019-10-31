@@ -28,7 +28,7 @@ Imagine that you create a React App and have Redux installed and configure it's 
 Within this problems, we at __DEVSPACE19__, create __INDUXION__, a React JS library that will help us to manage __Central Distributed State Management__ in one place. So, it will help you to use same state management for any projects. Basically, it's look like a minimal frontend-database. And you'll never has effort to re-create same states again and again.
 
 ## Installation
-All of us like a generator. So, we decide to make a generator for the core of __INDUXION__ (But, if you have an existing app, don't worry, you still can install the package as usual).
+All of us likes a generator. So, we decide to make a generator for the core of __INDUXION__ (But, if you have an existing app, don't worry, you still can install the package as usual).
 
 First of all, make sure you have the following __Pre-Requisites__:
 - Node JS installed in your machine
