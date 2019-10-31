@@ -1,0 +1,7 @@
+menu:
+  - title: Getting Started
+    url: getting-started
+  - title: Usage
+    url: usage
+  - title: Contributing
+    url: contributing

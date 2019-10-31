@@ -1,0 +1,114 @@
+.Content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    &__Container {
+        @media (min-width: 768px) {
+            padding: 0 2rem;
+            flex: 1;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: bold;
+        }
+
+        p {
+            color: rgba(black, .5);
+            letter-spacing: .25px;
+            line-height: 2;
+        }
+
+        pre {
+            font-size: small;
+            border-radius: 5px;
+        }
+
+        > code,
+        p > code {
+            background: #2d2d2d;
+            color: #ccc;
+            font-size: small;
+            padding: 3px 5px;
+            border-radius: 3px;
+            margin: 0 .25rem;
+        }
+
+        a {
+            letter-spacing: .25px;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        blockquote {
+            border-left: 5px solid darken($color-primary, 10%);
+            background: rgba($color-primary, .15);
+            padding: 10px;
+            color: darken($color-primary, 10%);
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid $color-primary;
+            border-top-width: 4px;
+            
+            caption {
+                text-align: center;
+                font-size: small;
+            }
+
+            thead {
+                tr {
+                    th {
+                        padding: 1rem;
+
+                        &:not(:last-child) {
+                            border-right: 1px solid $color-primary;
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        border-top: 1px solid $color-primary;
+                        padding: 1rem;
+                        font-size: .85rem;
+
+                        &:not(:last-child) {
+                            border-right: 1px solid $color-primary;
+                        }
+                    }
+
+                    &:nth-child(odd) {
+                        td {
+                            background-color: rgba($color-primary, .15);
+                        }
+                    }
+                    &:nth-child(even) {
+                        td {
+                            background-color: $color-primary;
+                            border-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

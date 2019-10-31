@@ -4,9 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.13.0"
+  },
+  "scripts": {
+    "dev": "concurrently gulp yarn:serve",
+    "serve": "bundle exec jekyll serve"
   }
 }

@@ -1,0 +1,15 @@
+.Footer {
+    border-top: 1px solid rgba(black, .1);
+    padding: 1rem 3rem;
+
+    p {
+        margin: 0 auto;
+        font-size: .9rem;
+        text-align: center;
+        color: rgba(black, .5);
+
+        a {
+            font-weight: bold;
+        }
+    }
+}

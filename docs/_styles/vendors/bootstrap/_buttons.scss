@@ -1,0 +1,26 @@
+.btn {
+    &-outline-light {
+        color: black;
+        border-color: black;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-primary !important;
+            background-color: black !important;
+            border-color: transparent;
+        }
+    }
+
+    &-primary {
+        background-color: $color-primary;
+        border-color: transparent;
+        color: black;
+
+        &:hover {
+            background-color: black;
+            border-color: transparent;
+            color: $color-primary;
+        }
+    }
+}

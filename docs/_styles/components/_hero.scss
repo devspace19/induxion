@@ -1,0 +1,18 @@
+.Hero {
+    background: $color-primary;
+    color: black;
+    padding: 5rem 20px;
+    text-align: center;
+
+    h1 {
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    &__Action {
+        margin-top: 3rem;
+    }
+}

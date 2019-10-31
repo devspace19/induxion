@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+.btn-outline-light {
+  color: black;
+  border-color: black; }
+  .btn-outline-light:hover, .btn-outline-light:focus, .btn-outline-light:active {
+    color: #fedd00 !important;
+    background-color: black !important;
+    border-color: transparent; }
+
+.btn-primary {
+  background-color: #fedd00;
+  border-color: transparent;
+  color: black; }
+  .btn-primary:hover {
+    background-color: black;
+    border-color: transparent;
+    color: #fedd00; }
+
+body,
+html {
+  font-family: "Open Sans", sans-serif; }
+
+a {
+  color: inherit; }
+  a:hover {
+    color: inherit; }
+
+img {
+  max-width: 100%; }
+
+.Card {
+  margin-bottom: 2rem; }
+  .Card img {
+    width: 100%; }
+  .Card p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center; }
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  @media (min-width: 768px) {
+    .Content {
+      flex-direction: row; } }
+  @media (min-width: 768px) {
+    .Content__Container {
+      padding: 0 2rem;
+      flex: 1; } }
+  .Content__Container h1,
+  .Content__Container h2,
+  .Content__Container h3,
+  .Content__Container h4,
+  .Content__Container h5,
+  .Content__Container h6 {
+    font-weight: bold; }
+  .Content__Container p {
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: .25px;
+    line-height: 2; }
+  .Content__Container pre {
+    font-size: small;
+    border-radius: 5px; }
+  .Content__Container > code,
+  .Content__Container p > code {
+    background: #2d2d2d;
+    color: #ccc;
+    font-size: small;
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin: 0 .25rem; }
+  .Content__Container a {
+    letter-spacing: .25px;
+    text-decoration: underline; }
+    .Content__Container a:hover {
+      text-decoration: none; }
+  .Content__Container blockquote {
+    border-left: 5px solid #cbb100;
+    background: rgba(254, 221, 0, 0.15);
+    padding: 10px;
+    color: #cbb100;
+    border-radius: 4px; }
+  .Content__Container table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #fedd00;
+    border-top-width: 4px; }
+    .Content__Container table caption {
+      text-align: center;
+      font-size: small; }
+    .Content__Container table thead tr th {
+      padding: 1rem; }
+      .Content__Container table thead tr th:not(:last-child) {
+        border-right: 1px solid #fedd00; }
+    .Content__Container table tbody tr td {
+      border-top: 1px solid #fedd00;
+      padding: 1rem;
+      font-size: .85rem; }
+      .Content__Container table tbody tr td:not(:last-child) {
+        border-right: 1px solid #fedd00; }
+    .Content__Container table tbody tr:nth-child(odd) td {
+      background-color: rgba(254, 221, 0, 0.15); }
+    .Content__Container table tbody tr:nth-child(even) td {
+      background-color: #fedd00;
+      border-color: white; }
+
+.Footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 3rem; }
+  .Footer p {
+    margin: 0 auto;
+    font-size: .9rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5); }
+    .Footer p a {
+      font-weight: bold; }
+
+.Hero {
+  background: #fedd00;
+  color: black;
+  padding: 5rem 20px;
+  text-align: center; }
+  .Hero h1 {
+    font-weight: bold; }
+  .Hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300; }
+  .Hero__Action {
+    margin-top: 3rem; }
+
+.Navbar {
+  background-color: #fedd00;
+  color: black;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  @media (min-width: 768px) {
+    .Navbar {
+      display: flex; } }
+  .Navbar__Left a {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase; }
+    .Navbar__Left a:hover {
+      text-decoration: none; }
+  .Navbar__Right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .Navbar__Right ul li {
+        display: inline-block; } }
+    .Navbar__Right ul li:not(:last-child) {
+      margin-right: 1rem; }
+    .Navbar__Right ul li a {
+      display: block;
+      font-size: .85rem;
+      font-weight: bold;
+      text-transform: uppercase; }
+
+.Section {
+  padding: 5rem 0; }
+  .Section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5rem; }
+  .Section__Action {
+    text-align: center; }
+    .Section__Action > a > i {
+      margin-right: .5rem; }
+  .Section--Alt {
+    background-color: #fedd00;
+    color: #333; }
+    .Section--Alt h2 {
+      color: inherit; }
+
+.Showcase {
+  display: flex; }
+  @media (max-width: 767px) {
+    .Showcase {
+      flex-direction: column; }
+      .Showcase img {
+        margin-top: 2rem;
+        margin-bottom: 2rem; }
+      .Showcase--Alt .Showcase__Left {
+        order: 1; }
+      .Showcase--Alt .Showcase__Right {
+        order: 0; } }
+  @media (min-width: 768px) {
+    .Showcase img {
+      border-radius: 0;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; } }
+  .Showcase h2 {
+    font-weight: 300;
+    font-size: 2.25rem;
+    margin-bottom: 1rem; }
+  .Showcase p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: .5px; }
+  .Showcase__Left, .Showcase__Right {
+    flex: 1; }
+  .Showcase__Left {
+    padding: 0; }
+  .Showcase__Right {
+    padding: 0 3rem; }
+  @media (min-width: 768px) {
+    .Showcase--Alt img {
+      border-radius: 0;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px; } }
+  .Showcase--Alt .Showcase__Left {
+    padding: 0 3rem; }
+  .Showcase--Alt .Showcase__Right {
+    padding: 0; }
+  .Showcase + .Showcase {
+    margin-top: 5rem; }
+
+.Sidebar {
+  margin-bottom: 5rem; }
+  @media (min-width: 768px) {
+    .Sidebar {
+      width: 300px;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      margin-bottom: 0; } }
+  .Sidebar h3 {
+    font-size: .9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.75); }
+  .Sidebar ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 1rem 0 0; }
+    .Sidebar ul + h3 {
+      margin-top: 2rem; }
+    .Sidebar ul li a {
+      display: block;
+      font-size: .85rem;
+      color: rgba(0, 0, 0, 0.6);
+      padding: 5px 10px;
+      border-left: 5px solid transparent; }
+      .Sidebar ul li a:hover {
+        background-color: #fff5b2;
+        border-left-color: #fedd00;
+        text-decoration: none; }

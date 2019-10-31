@@ -1,0 +1,16 @@
+body,
+html {
+    font-family: $font-family;
+}
+
+a {
+    color: inherit;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+img {
+    max-width: 100%;
+}
