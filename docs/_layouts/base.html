@@ -2,56 +2,60 @@
 
     {% include _components/navbar.html %}
 
-    {% include _components/hero.html title="Welcoming Induxion!" subtitle="A Redux Central Distributed State Management" url="/induxion/getting-started" %}
+    <main class="Base">
 
-    <section class="Section">
-        <h2 class="text-center">Why Induxion?</h2>
-        <div class="container">
-            <div class="row">
-                {% for item in site.data.landing.first %}
-                    <div class="col-xs-12 col-md-4">
-                        {% include _components/card.html img=item.img content=item.content %}
-                    </div>
+        {% include _components/hero.html title="Welcoming Induxion!" subtitle="A Redux Central Distributed State Management" url="/induxion/getting-started" %}
+
+        <section class="Section">
+            <h2 class="text-center">Why Induxion?</h2>
+            <div class="container">
+                <div class="row">
+                    {% for item in site.data.landing.first %}
+                        <div class="col-xs-12 col-md-4">
+                            {% include _components/card.html img=item.img content=item.content %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="Section Section--Alt">
+            <div class="container">
+                <h2 class="text-center">Core Features</h2>
+
+                {% for item in site.data.landing.second %}
+                    {% unless item.alt %}
+                        <div class="Showcase">
+                            <div class="Showcase__Left"><img src="{{ item.img }}"></div>
+                            <div class="Showcase__Right">
+                                <h2>{{ item.title }}</h2>
+                                <p>{{ item.content }}</p>
+                            </div>
+                        </div>
+                    {% endunless %}
+
+                    {% if item.alt == true %}
+                        <div class="Showcase Showcase--Alt">
+                            <div class="Showcase__Left">
+                                <h2>{{ item.title }}</h2>
+                                <p>{{ item.content }}</p>
+                            </div>
+                            <div class="Showcase__Right"><img src="{{ item.img }}"></div>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="Section Section--Alt">
-        <div class="container">
-            <h2 class="text-center">Core Features</h2>
+        <section class="Section">
+            <h2 class="text-center">Fork and 🌟 us in GitHub!</h2>
+            <div class="container">
+                <p class="text-center">We need you to make this project better and can cover all the frontend data
+                    management things. Simply, click the button below to start contributing!</p>
+            </div>
+            <div class="Section__Action"><a class="btn btn-primary btn-lg" href="https://github.com/devspace19/induxion"><i class="fa fa-github-alt fa-fw"></i>Search INDUXION on GitHub</a></div>
+        </section>
 
-            {% for item in site.data.landing.second %}
-                {% unless item.alt %}
-                    <div class="Showcase">
-                        <div class="Showcase__Left"><img src="{{ item.img }}"></div>
-                        <div class="Showcase__Right">
-                            <h2>{{ item.title }}</h2>
-                            <p>{{ item.content }}</p>
-                        </div>
-                    </div>
-                {% endunless %}
-
-                {% if item.alt == true %}
-                    <div class="Showcase Showcase--Alt">
-                        <div class="Showcase__Left">
-                            <h2>{{ item.title }}</h2>
-                            <p>{{ item.content }}</p>
-                        </div>
-                        <div class="Showcase__Right"><img src="{{ item.img }}"></div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-    </section>
-
-    <section class="Section">
-        <h2 class="text-center">Fork and 🌟 us in GitHub!</h2>
-        <div class="container">
-            <p class="text-center">We need you to make this project better and can cover all the frontend data
-                management things. Simply, click the button below to start contributing!</p>
-        </div>
-        <div class="Section__Action"><a class="btn btn-primary btn-lg" href="https://github.com/devspace19/induxion"><i class="fa fa-github-alt fa-fw"></i>Search INDUXION on GitHub</a></div>
-    </section>
+    </main>
     
     {% include _commons/footer.html %}

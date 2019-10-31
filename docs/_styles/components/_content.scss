@@ -6,6 +6,7 @@
 
     @media (min-width: 768px) {
         flex-direction: row;
+        margin-top: $navbar-height;
     }
 
     &__Container {

@@ -5,10 +5,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    border-bottom: 1px solid rgba(white, .1);
+    border-bottom: 1px solid rgba(black, .1);
 
     @media (min-width: 768px) {
         display: flex;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: $navbar-height;
+        z-index: 1;
     }
 
     &__Left {
