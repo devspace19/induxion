@@ -1,0 +1,10 @@
+<nav class="Navbar">
+    <div class="Navbar__Left"><a href="/induxion/">Induxion</a></div>
+    <div class="Navbar__Right">
+        <ul class="Navbar__Menu">
+            {% for item in site.data.navbar.menu %}
+            <li><a href="/induxion/{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

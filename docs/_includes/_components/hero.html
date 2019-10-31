@@ -1,0 +1,23 @@
+{% if include.title %}
+{% assign title = include.title %}
+{% else %}
+{% assign title = "Default Title" %}
+{% endif %}
+
+{% if include.subtitle %}
+{% assign subtitle = include.subtitle %}
+{% else %}
+{% assign subtitle = "Default Sub-Title" %}
+{% endif %}
+
+{% if include.url %}
+{% assign url = include.url %}
+{% else %}
+{% assign url = "" %}
+{% endif %}
+
+<section class="Hero">
+    <h1>{{ title }}</h1>
+    <h2>{{ subtitle }}</h2>
+    <div class="Hero__Action"><a class="btn btn-outline-light" href="{{ url }}">Learn More</a></div>
+</section>

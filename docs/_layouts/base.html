@@ -1,65 +1,43 @@
 {% include _commons/header.html %}
 
-    <nav class="Navbar">
-        <div class="Navbar__Left"><a href="/induxion">Induxion</a></div>
-        <div class="Navbar__Right">
-            <ul class="Navbar__Menu">
-                {% for item in site.data.navbar.menu %}
-                <li><a href="/induxion/{{ item.url }}">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </nav>
-    <section class="Hero">
-        <h1>Welcoming Induxion!</h1>
-        <h2>A Redux Central Distributed State Management</h2>
-        <div class="Hero__Action"><a class="btn btn-outline-light" href="#">Learn More</a></div>
-    </section>
+    {% include _components/navbar.html %}
+
+    {% include _components/hero.html title="Welcoming Induxion!" subtitle="A Redux Central Distributed State Management" url="/induxion/getting-started" %}
+
     <section class="Section">
         <h2 class="text-center">Why Induxion?</h2>
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-md-4">
-                    <div class="Card"><img src="https://via.placeholder.com/300x300" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iusto dolore eveniet quo maiores
-                            placeat at tenetur pariatur.</p>
+                {% for item in site.data.landing.first %}
+                    <div class="col-xs-12 col-md-4">
+                        {% include _components/card.html img=item.img content=item.content %}
                     </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="Card"><img src="https://via.placeholder.com/300x300" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iusto dolore eveniet quo maiores
-                            placeat at tenetur pariatur.</p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="Card"><img src="https://via.placeholder.com/300x300" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iusto dolore eveniet quo maiores
-                            placeat at tenetur pariatur.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
 
     <section class="Section Section--Alt">
-        <h2 class="text-center">Core Features</h2>
-        <div class="Showcase">
-            <div class="Showcase__Left"><img src="/induxion/assets/images/showcase.png"></div>
-            <div class="Showcase__Right">
-                <h2>Showcase Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, iste doloremque. Atque quibusdam
-                    eligendi repudiandae expedita corrupti voluptates veniam dolorem, culpa harum illo sit molestias
-                    autem et ea aspernatur nemo!</p>
+        <div class="container">
+            <h2 class="text-center">Core Features</h2>
+            <div class="Showcase">
+                <div class="Showcase__Left"><img src="/induxion/assets/images/showcase.png"></div>
+                <div class="Showcase__Right">
+                    <h2>Showcase Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, iste doloremque. Atque quibusdam
+                        eligendi repudiandae expedita corrupti voluptates veniam dolorem, culpa harum illo sit molestias
+                        autem et ea aspernatur nemo!</p>
+                </div>
             </div>
-        </div>
-        <div class="Showcase Showcase--Alt">
-            <div class="Showcase__Left">
-                <h2>Showcase Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, iste doloremque. Atque quibusdam
-                    eligendi repudiandae expedita corrupti voluptates veniam dolorem, culpa harum illo sit molestias
-                    autem et ea aspernatur nemo!</p>
+            <div class="Showcase Showcase--Alt">
+                <div class="Showcase__Left">
+                    <h2>Showcase Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, iste doloremque. Atque quibusdam
+                        eligendi repudiandae expedita corrupti voluptates veniam dolorem, culpa harum illo sit molestias
+                        autem et ea aspernatur nemo!</p>
+                </div>
+                <div class="Showcase__Right"><img src="/induxion/assets/images/showcase.png"></div>
             </div>
-            <div class="Showcase__Right"><img src="/induxion/assets/images/showcase.png"></div>
         </div>
     </section>
 
@@ -72,9 +50,5 @@
         <div class="Section__Action"><a class="btn btn-primary btn-lg" href="https://github.com/devspace19/induxion"><i
                     class="fa fa-github-alt fa-fw"></i>Search INDUXION on GitHub</a></div>
     </section>
-
-    <footer class="Footer">
-        <p>&copy; 2019, <a href="https://github.com/devspace19" target="_blank">DEVSPACE19</a>. Allrights Reserved.</p>
-    </footer>
     
     {% include _commons/footer.html %}

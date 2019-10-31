@@ -13,7 +13,7 @@ const SCSSTask = () => {
 };
 
 const defaultTask = cb => {
-    watch('_styles/*.scss', {
+    watch('_styles/**/*.scss', {
         ignoreInitial: false
     }, SCSSTask);
     cb();

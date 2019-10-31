@@ -9,6 +9,8 @@
     }
 
     &__Container {
+        min-height: 100vh;
+        
         @media (min-width: 768px) {
             padding: 0 2rem;
             flex: 1;
