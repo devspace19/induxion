@@ -1,7 +1,7 @@
 menu:
   - title: Getting Started
     url: getting-started
-  - title: Usage
-    url: usage
+  - title: References
+    url: references
   - title: Contributing
     url: contributing

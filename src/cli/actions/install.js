@@ -32,9 +32,11 @@ const packageInstall = cmd => {
 
 const install = async (target, currentAction, totalActions) => {
     try {
+        totalActions++;
         text(`[${currentAction}/${totalActions}] Checking the required commands...`, 'green');
         currentAction++;
 
+        totalActions++;
         const isUseYarn = await checkRequirements();
         text(`[${currentAction}/${totalActions}] All required commands passed!`, 'green');
         currentAction++;

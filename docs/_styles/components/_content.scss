@@ -31,13 +31,18 @@
             line-height: 2;
         }
 
+        ul, ol {
+            color: rgba(black, .5);
+        }
+
         pre {
             font-size: small;
             border-radius: 5px;
         }
 
-        > code,
-        p > code {
+        ol code,
+        ul code,
+        p code {
             background: #2d2d2d;
             color: #ccc;
             font-size: small;
@@ -61,6 +66,14 @@
             padding: 10px;
             color: darken($color-primary, 10%);
             border-radius: 4px;
+
+            p {
+                margin: 0 auto;
+
+                & + & {
+                    margin-top: 1rem;
+                }
+            }
         }
 
         table {

@@ -72,11 +72,14 @@ img {
       color: rgba(0, 0, 0, 0.5);
       letter-spacing: .25px;
       line-height: 2; }
+    .Content__Container ul, .Content__Container ol {
+      color: rgba(0, 0, 0, 0.5); }
     .Content__Container pre {
       font-size: small;
       border-radius: 5px; }
-    .Content__Container > code,
-    .Content__Container p > code {
+    .Content__Container ol code,
+    .Content__Container ul code,
+    .Content__Container p code {
       background: #2d2d2d;
       color: #ccc;
       font-size: small;
@@ -94,6 +97,10 @@ img {
       padding: 10px;
       color: #cbb100;
       border-radius: 4px; }
+      .Content__Container blockquote p {
+        margin: 0 auto; }
+        .Content__Container blockquote p + .Content__Container blockquote p {
+          margin-top: 1rem; }
     .Content__Container table {
       width: 100%;
       border-collapse: collapse;
@@ -156,7 +163,8 @@ img {
   .Navbar__Left a {
     font-size: 2rem;
     font-weight: bold;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-decoration: none; }
     .Navbar__Left a:hover {
       text-decoration: none; }
   .Navbar__Right ul {
@@ -216,6 +224,13 @@ img {
     font-weight: 300;
     line-height: 2;
     letter-spacing: .5px; }
+  .Showcase p code {
+    background: #2d2d2d;
+    color: #ccc;
+    font-size: small;
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin: 0 .25rem; }
   .Showcase__Left, .Showcase__Right {
     flex: 1; }
   .Showcase__Left {
@@ -241,6 +256,9 @@ img {
       width: 300px;
       border-right: 1px solid rgba(0, 0, 0, 0.1);
       margin-bottom: 0; } }
+  .Sidebar__Container {
+    position: sticky;
+    top: 1rem; }
   .Sidebar h3 {
     font-size: .9rem;
     font-weight: bold;
@@ -257,7 +275,8 @@ img {
       font-size: .85rem;
       color: rgba(0, 0, 0, 0.6);
       padding: 5px 10px;
-      border-left: 5px solid transparent; }
+      border-left: 5px solid transparent;
+      text-decoration: none; }
       .Sidebar ul li a:hover {
         background-color: #fff5b2;
         border-left-color: #fedd00;

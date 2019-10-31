@@ -1,7 +1,18 @@
 first:
   - img: https://via.placeholder.com/300x300
-    content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iusto dolore eveniet quo maiores placeat at tenetur pariatur.
+    content: Now, you can have multiple apps in the same Redux state management.
   - img: https://via.placeholder.com/300x300
-    content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iusto dolore eveniet quo maiores placeat at tenetur pariatur.
+    content: Easy to use, maintain and Redux friendly API syntax.
   - img: https://via.placeholder.com/300x300
-    content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iusto dolore eveniet quo maiores placeat at tenetur pariatur.
+    content: Automatically generate documentation for using your storage.
+second:
+  - title: Initial Creation Generator
+    img: /induxion/assets/images/showcase.png
+    content: We have an Initial Creation Generator that help's you to start from scratch easily.<br/><br/>Just run <code>create-induxion-app</code> and voila! Your storage are ready to use.
+  - title: Minimal Configuration
+    img: /induxion/assets/images/showcase.png
+    content: We love Redux, so we still keep the implementation of <strong>Actions</strong> and <strong>Reducers</strong>. You just keep it's syntax and they all good to go!
+    alt: true
+  - title: Storage Document Generator
+    img: /induxion/assets/images/showcase.png
+    content: Each of your storage will have document generator for automatically create a <strong>Storage Documents</strong> for your user.

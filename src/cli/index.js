@@ -10,9 +10,7 @@ const line = require('./helpers/line');
 // Load actions
 const actions = {
     clone: require('./actions/clone'),
-    install: require('./actions/install'),
-    clean: require('./actions/clean'),
-    finish: require('./actions/finish')
+    install: require('./actions/install')
 };
 
 // Init

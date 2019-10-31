@@ -1,4 +1,4 @@
 module.exports = {
     // Induxion Template target repository URL
-    templateRepoURL: 'https://github.com/devspace19/induxion.git'
+    templateRepoURL: 'https://github.com/devspace19/induxion-template.git'
 };
