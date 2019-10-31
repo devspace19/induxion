@@ -1,33 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-.btn-outline-light {
-  color: black;
-  border-color: black; }
-  .btn-outline-light:hover, .btn-outline-light:focus, .btn-outline-light:active {
-    color: #fedd00 !important;
-    background-color: black !important;
-    border-color: transparent; }
-
-.btn-primary {
-  background-color: #fedd00;
-  border-color: transparent;
-  color: black; }
-  .btn-primary:hover {
-    background-color: black;
+.btn {
+  text-decoration: none; }
+  .btn-outline-light {
+    color: black;
+    border-color: black; }
+    .btn-outline-light:hover, .btn-outline-light:focus, .btn-outline-light:active {
+      color: #fedd00 !important;
+      background-color: black !important;
+      border-color: transparent; }
+  .btn-primary {
+    background-color: #fedd00;
     border-color: transparent;
-    color: #fedd00; }
+    color: black; }
+    .btn-primary:hover {
+      background-color: black;
+      border-color: transparent;
+      color: #fedd00; }
 
 body,
 html {
   font-family: "Open Sans", sans-serif; }
 
 a {
-  color: inherit; }
+  color: inherit;
+  text-decoration: underline; }
   a:hover {
-    color: inherit; }
+    color: inherit;
+    text-decoration: none; }
 
 img {
   max-width: 100%; }
+
+.Error {
+  text-align: center;
+  margin: 5rem auto;
+  min-height: calc(100vh - 150px - 10rem); }
 
 .Card {
   margin-bottom: 2rem; }
@@ -48,7 +56,7 @@ img {
     .Content {
       flex-direction: row; } }
   .Content__Container {
-    min-height: 100vh; }
+    min-height: calc(100vh - 200px); }
     @media (min-width: 768px) {
       .Content__Container {
         padding: 0 2rem;

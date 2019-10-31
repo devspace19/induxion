@@ -9,7 +9,7 @@
     }
 
     &__Container {
-        min-height: 100vh;
+        min-height: calc(100vh - 200px);
         
         @media (min-width: 768px) {
             padding: 0 2rem;

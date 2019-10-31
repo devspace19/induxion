@@ -1,0 +1,5 @@
+---
+layout: two-columns
+---
+
+# Storage

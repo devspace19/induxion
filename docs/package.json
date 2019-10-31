@@ -8,10 +8,11 @@
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "gulp-sass": "^4.0.2",
+    "gulp-touch-cmd": "^0.0.1",
     "node-sass": "^4.13.0"
   },
   "scripts": {
     "dev": "concurrently gulp yarn:serve",
-    "serve": "bundle exec jekyll serve"
+    "serve": "bundle exec jekyll serve --watch"
   }
 }
