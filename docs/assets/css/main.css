@@ -36,6 +36,9 @@ img {
   text-align: center;
   margin: 5rem auto;
   min-height: calc(100vh - 150px - 10rem); }
+  @media (min-width: 768px) {
+    .Error {
+      margin-top: calc(70px + 5rem); } }
 
 @media (min-width: 768px) {
   .Base {
@@ -44,7 +47,9 @@ img {
 .Card {
   margin-bottom: 2rem; }
   .Card img {
-    width: 100%; }
+    width: 100px;
+    margin: 0 auto 2rem;
+    display: block; }
   .Card p {
     margin-top: 1rem;
     font-size: 1.25rem;

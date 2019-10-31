@@ -2,4 +2,8 @@
     text-align: center;
     margin: 5rem auto;
     min-height: calc(100vh - 150px - 10rem);
+
+    @media (min-width: 768px) {
+        margin-top: calc(#{$navbar-height} + 5rem);
+    }
 }

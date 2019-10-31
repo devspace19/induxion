@@ -1,9 +1,9 @@
 first:
-  - img: https://via.placeholder.com/300x300
+  - img: /induxion/assets/images/first-fold-01.svg
     content: Now, you can have multiple apps in the same Redux state management.
-  - img: https://via.placeholder.com/300x300
+  - img: /induxion/assets/images/first-fold-02.svg
     content: Easy to use, maintain and Redux friendly API syntax.
-  - img: https://via.placeholder.com/300x300
+  - img: /induxion/assets/images/first-fold-03.svg
     content: Automatically generate documentation for using your storage.
 second:
   - title: Initial Creation Generator
