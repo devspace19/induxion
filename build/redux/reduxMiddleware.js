@@ -23,7 +23,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var _default = function _default(client) {
+var _default = function _default() {
   return function (_ref) {
     var dispatch = _ref.dispatch,
         getState = _ref.getState;
@@ -49,7 +49,7 @@ var _default = function _default(client) {
         next(_objectSpread({}, rest || {}, {
           type: REQUEST
         }));
-        var actionPromise = promise(client, dispatch);
+        var actionPromise = promise(dispatch, getState);
         actionPromise.then(function (result) {
           return next(_objectSpread({}, rest || {}, {
             result: result,
