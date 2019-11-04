@@ -7,7 +7,7 @@
     "links": "npm link && npm link induxion",
     "watch": "babel src/core -d build --copy-files --watch",
     "build": "babel src/core -d build --copy-files",
-    "test": "npm test"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -51,6 +51,9 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "all-contributors-cli": "^6.9.3",
-    "husky": "^3.0.9"
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0"
   }
 }
